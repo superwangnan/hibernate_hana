@@ -135,7 +135,7 @@ the database, sets up Hibernate and annotation configuration.
 
     <!-- Hibernate session factory -->
     <bean id="sessionFactory"
-        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="packagesToScan" value="${packageToScan:df}" />
         <property name="hibernateProperties">
@@ -154,7 +154,7 @@ the database, sets up Hibernate and annotation configuration.
         proxy-target-class="true" />
 
     <bean id="txManager"
-        class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 </beans>

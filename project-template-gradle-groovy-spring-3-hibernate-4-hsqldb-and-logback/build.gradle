@@ -6,8 +6,10 @@ mainClassName = 'df.ormtemplate.Main'
 ext {
   v = [
     groovy: '2.1.6',
-    spring: '3.1.4.RELEASE',
-	hibernate: '4.2.4.Final',
+//    spring: '3.1.4.RELEASE',
+    spring: '4.3.0.RELEASE',
+//	hibernate: '4.2.4.Final',
+    hibernate: '5.2.1.Final',
     junit: '4.11',
     slf4j: '1.7.5',
     logback: '1.0.13']
@@ -33,6 +35,8 @@ dependencies {
         "commons-cli:commons-cli:1.2",
         "cglib:cglib:2.2.2"
     )
+
+    runtime fileTree(dir: 'libs', include: '*.jar')
 
     // Logging
     compile "ch.qos.logback:logback-classic:$v.logback"
